@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import siteData from '../data/site-data.json';
+import Icon from '../components/Icon.astro';
 
 const { navItems } = siteData;
 
@@ -15,6 +16,7 @@ const {
 } = Astro.props;
 
 const fullTitle = title.includes("Dandy's World") ? title : `${title} | Dandy's World Magyar Rajongói Oldal`;
+const currentPath = Astro.url.pathname;
 ---
 
 <!doctype html>
@@ -42,9 +44,15 @@ const fullTitle = title.includes("Dandy's World") ? title : `${title} | Dandy's 
 				</button>
 
 				<nav class="nav-menu" id="navMenu">
-					{navItems.map((item) => (
-						<a href={item.href} class="nav-link">{item.label}</a>
-					))}
+					{navItems.map((item) => {
+						const isActive = currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href));
+						return (
+							<a href={item.href} class={`nav-link ${isActive ? 'active' : ''}`}>
+								<Icon name={item.icon || 'info'} size={18} />
+								<span>{item.label}</span>
+							</a>
+						);
+					})}
 				</nav>
 			</div>
 		</header>
@@ -164,11 +172,15 @@ const fullTitle = title.includes("Dandy's World") ? title : `${title} | Dandy's 
 			}
 
 			.nav-link {
-				padding: 0.5rem 1rem;
-				border-radius: 10px;
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+				padding: 0.6rem 1.25rem;
+				border-radius: var(--radius-btn);
 				font-weight: 700;
-				font-size: 1.25rem;
+				font-size: 1.125rem;
 				color: hsl(var(--text-secondary));
+				transition: all 0.2s ease;
 			}
 
 			@media (min-width: 768px) {
@@ -180,6 +192,11 @@ const fullTitle = title.includes("Dandy's World") ? title : `${title} | Dandy's 
 			.nav-link:hover {
 				background-color: hsl(var(--bg-primary));
 				color: hsl(var(--text-primary));
+			}
+			
+			.nav-link.active {
+				background-color: hsl(var(--accent-primary), 0.1);
+				color: hsl(var(--accent-primary));
 			}
 
 			.footer-icon {

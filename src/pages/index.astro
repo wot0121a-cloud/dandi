@@ -3,148 +3,325 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { toonCards } from '../data/site-data.json';
 
 const featuredCards = toonCards.filter(card => card.featured);
+
+// Fandom wiki image examples
+const heroImage = "https://static.wikia.nocookie.net/dandys-world-robloxhorror/images/b/b3/Boxten_Render.png";
 ---
 
 <BaseLayout>
-	<section class="hero">
-		<h1 class="hero-title">Dandy's World <span class="highlight">Magyarul</span></h1>
-		<p class="hero-subtitle">
-			Fedezd fel a Gardenview Center titkait, ismerd meg a Toonokat, és éld túl a Twisted-ek támadását!
-		</p>
-		<div class="hero-btns">
-			<a href="/karakterek" class="btn btn-primary">Karakterek böngészése</a>
-			<a href="/toon-kapcsolatok" class="btn btn-outline">Teóriák & Kapcsolatok</a>
+	<section class="hero animate-fade-in">
+		<div class="hero-content">
+			<div class="hero-badge">🌈 Üdvözlünk a Toonok világában!</div>
+			<h1 class="hero-title">
+				Dandy's World
+				<span class="highlight">Magyar Rajongói Oldal</span>
+			</h1>
+			<p class="hero-subtitle">
+				Karakter statisztikák, képességek, Twisted túlélési útmutatók és a legmélyebb rajongói teóriák egy helyen.
+			</p>
+			<div class="hero-btns">
+				<a href="/karakterek" class="btn btn-yellow">
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
+					Ismerd meg a Toonokat
+				</a>
+				<a href="/twisted-toonok" class="btn btn-dark">
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+					Twisted Túlélés
+				</a>
+			</div>
+		</div>
+		<div class="hero-image-wrap animate-float">
+			<!-- Képgenerálás helye vagy beillesztett kép -->
+			<div class="hero-image-bg">
+				<img src={heroImage} alt="Boxten Toon Dandy's World" class="hero-img" onerror="this.style.display='none'" />
+			</div>
 		</div>
 	</section>
 
 	<section class="featured">
 		<div class="section-header">
-			<h2 class="section-title">Kiemelt Hírek & Teóriák</h2>
-			<p class="section-subtitle">A legfontosabb infók a Toon-világból.</p>
+			<h2 class="section-title">
+				<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+				Kiemelt Toon-kapcsolatok
+			</h2>
+			<a href="/toon-kapcsolatok" class="btn-sm btn-light">Összes <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></a>
 		</div>
 
 		<div class="card-grid">
 			{featuredCards.map((card) => (
-				<article class={`card border-${card.color}`}>
-					<div class="card-status">{card.status}</div>
-					<h3 class="card-title">{card.title}</h3>
-					<p class="card-desc">{card.description}</p>
-					<a href="#" class="card-link">Tovább olvasok →</a>
+				<article class={`card card-${card.color}`}>
+					<div class="card-image-placeholder"></div>
+					<div class="card-content">
+						<div class="card-status">
+							<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+							{card.status}
+						</div>
+						<h3 class="card-title">{card.title}</h3>
+						<p class="card-desc">{card.description}</p>
+					</div>
 				</article>
 			))}
 		</div>
 	</section>
 
+	<section class="banner-dark">
+		<div class="banner-content">
+			<div class="banner-icon">⚠️</div>
+			<div class="banner-text">
+				<h2 class="banner-title">Vigyázz a Twisted Toonokkal!</h2>
+				<p class="banner-desc">Tudd meg, melyik szörny hogyan viselkedik, milyen gyors, és olvasd el a legjobb túlélési tippjeinket, hogy élve elérd a következő liftet!</p>
+			</div>
+		</div>
+		<a href="/twisted-toonok" class="btn btn-danger">Túlélési Útmutató</a>
+	</section>
+
 	<style>
+		/* Animations */
+		@keyframes fadeIn {
+			from { opacity: 0; transform: translateY(20px); }
+			to { opacity: 1; transform: translateY(0); }
+		}
+
+		.animate-fade-in {
+			animation: fadeIn 0.8s ease-out forwards;
+		}
+
+		/* Hero Banner */
 		.hero {
-			text-align: center;
-			padding: 4rem 0 6rem;
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 3rem;
+			background: linear-gradient(135deg, hsl(var(--accent-primary)), hsl(var(--accent-secondary)));
+			border-radius: var(--radius-lg);
+			padding: 4rem 3rem;
+			color: white;
+			margin-bottom: 4rem;
+			box-shadow: 0 25px 50px -12px hsla(var(--accent-primary), 0.4);
+			overflow: hidden;
+			position: relative;
+		}
+
+		@media (min-width: 992px) {
+			.hero {
+				grid-template-columns: 1.2fr 1fr;
+				align-items: center;
+				padding: 5rem 4rem;
+			}
+		}
+
+		.hero-badge {
+			display: inline-flex;
+			align-items: center;
+			background-color: hsla(0, 0%, 100%, 0.2);
+			border: 1px solid hsla(0, 0%, 100%, 0.3);
+			padding: 0.5rem 1rem;
+			border-radius: var(--radius-btn);
+			font-size: 0.875rem;
+			font-weight: 700;
+			margin-bottom: 1.5rem;
+			backdrop-filter: blur(10px);
 		}
 
 		.hero-title {
-			font-size: 3.5rem;
-			margin-bottom: 1.5rem;
+			font-size: clamp(2.5rem, 5vw, 4rem);
+			margin-bottom: 1rem;
+			letter-spacing: -0.03em;
+			line-height: 1.1;
 		}
 
 		.highlight {
-			background: linear-gradient(135deg, hsl(var(--accent-primary)), hsl(var(--accent-secondary)));
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
+			display: block;
+			color: hsl(var(--btn-yellow));
+			text-shadow: 0 4px 15px hsla(var(--btn-yellow), 0.4);
 		}
 
 		.hero-subtitle {
 			font-size: 1.25rem;
-			color: hsl(var(--text-secondary));
-			max-width: 700px;
-			margin: 0 auto 2.5rem;
+			opacity: 0.9;
+			max-width: 600px;
+			margin-bottom: 2.5rem;
+			font-weight: 500;
 		}
 
+		/* Buttons */
 		.hero-btns {
 			display: flex;
+			flex-wrap: wrap;
 			gap: 1rem;
-			justify-content: center;
 		}
 
 		.btn {
-			padding: 1rem 2rem;
-			border-radius: 14px;
-			font-weight: 900;
-			font-size: 1rem;
-			display: inline-block;
+			display: flex;
+			align-items: center;
+			gap: 0.75rem;
+			padding: 1rem 1.75rem;
+			border-radius: var(--radius-btn);
+			font-weight: 800;
+			font-size: 1.125rem;
 			transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+			text-align: center;
 		}
 
-		.btn-primary {
-			background-color: hsl(var(--text-primary));
-			color: white;
-			box-shadow: 0 10px 20px hsla(var(--text-primary), 0.2);
-		}
-
-		.btn-primary:hover {
-			transform: translateY(-4px);
-			box-shadow: 0 15px 30px hsla(var(--text-primary), 0.3);
-		}
-
-		.btn-outline {
-			border: 2px solid hsl(var(--border-color));
+		.btn-yellow {
+			background-color: hsl(var(--btn-yellow));
 			color: hsl(var(--text-primary));
+			box-shadow: 0 10px 25px hsla(var(--btn-yellow), 0.4);
 		}
 
-		.btn-outline:hover {
-			background-color: hsl(var(--bg-secondary));
-			border-color: hsl(var(--text-primary));
+		.btn-yellow:hover {
+			transform: translateY(-5px) scale(1.02);
+			box-shadow: 0 15px 35px hsla(var(--btn-yellow), 0.5);
+		}
+
+		.btn-dark {
+			background-color: hsl(var(--btn-dark));
+			color: white;
+			box-shadow: 0 10px 25px hsla(var(--btn-dark), 0.4);
+		}
+
+		.btn-dark:hover {
+			transform: translateY(-5px) scale(1.02);
+			box-shadow: 0 15px 35px hsla(var(--btn-dark), 0.5);
+			background-color: hsla(var(--btn-dark), 0.9);
+		}
+
+		/* Hero Image Area */
+		.hero-image-wrap {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.hero-image-bg {
+			width: 100%;
+			max-width: 400px;
+			aspect-ratio: 1;
+			background: hsla(0, 0%, 100%, 0.2);
+			border: 4px solid hsla(0, 0%, 100%, 0.4);
+			border-radius: 48px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			backdrop-filter: blur(10px);
+			position: relative;
+			transform: rotate(5deg);
+		}
+
+		.hero-image-bg::before {
+			content: '';
+			width: 60px;
+			height: 15px;
+			background: hsla(0, 0%, 100%, 0.4);
+			border-radius: 10px;
+			position: absolute;
+		}
+
+		.hero-img {
+			position: absolute;
+			max-height: 130%;
+			max-width: 130%;
+			object-fit: contain;
+			transform: scale(1.1) rotate(-5deg);
+			filter: drop-shadow(0 20px 30px rgba(0,0,0,0.3));
+			pointer-events: none;
 		}
 
 		/* Featured Section */
-		.featured {
-			padding-bottom: 4rem;
-		}
-
 		.section-header {
-			margin-bottom: 3rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			margin-bottom: 2.5rem;
 		}
 
 		.section-title {
-			font-size: 2.5rem;
-			margin-bottom: 0.5rem;
+			display: flex;
+			align-items: center;
+			gap: 0.75rem;
+			font-size: 2rem;
+			color: hsl(var(--text-primary));
 		}
 
-		.section-subtitle {
-			color: hsl(var(--text-secondary));
-			font-size: 1.125rem;
+		.btn-light {
+			display: flex;
+			align-items: center;
+			gap: 0.25rem;
+			padding: 0.5rem 1rem;
+			background-color: hsl(var(--accent-primary), 0.1);
+			color: hsl(var(--accent-primary));
+			font-weight: 800;
+			border-radius: var(--radius-btn);
+		}
+
+		.btn-light:hover {
+			background-color: hsl(var(--accent-primary));
+			color: white;
 		}
 
 		.card-grid {
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 			gap: 2rem;
 		}
 
 		.card {
-			padding: 2rem;
 			background-color: hsl(var(--bg-secondary));
-			border-radius: 24px;
+			border-radius: var(--radius-lg);
 			border: 1px solid hsl(var(--border-color));
-			transition: all 0.3s ease;
-			position: relative;
+			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 			overflow: hidden;
+			display: flex;
+			flex-direction: column;
 		}
 		
 		.card:hover {
 			transform: translateY(-8px);
 			box-shadow: 0 20px 40px var(--shadow-color);
+			border-color: transparent;
+		}
+
+		.card-image-placeholder {
+			height: 200px;
+			width: 100%;
+			background: linear-gradient(to bottom right, #e2e8f0, #cbd5e1);
+			position: relative;
+		}
+
+		.card-image-placeholder::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 40px;
+			height: 12px;
+			background: rgba(0,0,0,0.1);
+			border-radius: 6px;
+		}
+
+		.card-sky .card-image-placeholder { background: linear-gradient(135deg, #7dd3fc, #38bdf8); }
+		.card-rose .card-image-placeholder { background: linear-gradient(135deg, #fda4af, #fb7185); }
+		.card-emerald .card-image-placeholder { background: linear-gradient(135deg, #6ee7b7, #34d399); }
+		.card-purple .card-image-placeholder { background: linear-gradient(135deg, #d8b4fe, #c084fc); }
+
+		.card-content {
+			padding: 2rem;
+			flex-grow: 1;
 		}
 
 		.card-status {
-			display: inline-block;
-			padding: 0.25rem 0.75rem;
-			border-radius: 20px;
+			display: inline-flex;
+			align-items: center;
+			gap: 0.35rem;
+			padding: 0.35rem 0.85rem;
+			border-radius: var(--radius-btn);
 			font-size: 0.75rem;
-			font-weight: 900;
-			text-transform: uppercase;
+			font-weight: 800;
 			margin-bottom: 1.25rem;
-			background-color: hsl(var(--bg-primary));
 		}
+
+		.card-sky .card-status { background-color: #e0f2fe; color: #0369a1; }
+		.card-rose .card-status { background-color: #ffe4e6; color: #be123c; }
 
 		.card-title {
 			font-size: 1.5rem;
@@ -153,19 +330,80 @@ const featuredCards = toonCards.filter(card => card.featured);
 
 		.card-desc {
 			color: hsl(var(--text-secondary));
-			margin-bottom: 1.5rem;
+			font-size: 1rem;
+			line-height: 1.6;
 		}
 
-		.card-link {
-			font-weight: 900;
-			color: hsl(var(--accent-primary));
-			font-size: 0.875rem;
+		/* Dark Banner */
+		.banner-dark {
+			background-color: hsl(var(--btn-dark));
+			border-radius: var(--radius-lg);
+			padding: 3rem;
+			margin-top: 4rem;
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+			color: white;
+			position: relative;
+			overflow: hidden;
 		}
 
-		/* Card border colors */
-		.border-sky { border-top: 6px solid #0ea5e9; }
-		.border-rose { border-top: 6px solid #f43f5e; }
-		.border-emerald { border-top: 6px solid #10b981; }
-		.border-purple { border-top: 6px solid #a855f7; }
+		@media (min-width: 768px) {
+			.banner-dark {
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+			}
+		}
+
+		.banner-dark::after {
+			content: '';
+			position: absolute;
+			right: -20px;
+			top: -40px;
+			width: 200px;
+			height: 300px;
+			border: 20px solid hsla(0, 0%, 100%, 0.05);
+			border-radius: 100px;
+			transform: rotate(15deg);
+			pointer-events: none;
+		}
+
+		.banner-content {
+			display: flex;
+			gap: 1.5rem;
+			align-items: flex-start;
+			max-width: 700px;
+		}
+
+		.banner-icon {
+			font-size: 2.5rem;
+			line-height: 1;
+			filter: drop-shadow(0 0 10px rgba(255,50,50,0.5));
+		}
+
+		.banner-title {
+			font-size: 2rem;
+			margin-bottom: 0.5rem;
+			color: white;
+		}
+
+		.banner-desc {
+			color: hsla(0, 0%, 100%, 0.8);
+			font-size: 1.125rem;
+		}
+
+		.btn-danger {
+			background-color: #f43f5e;
+			color: white;
+			white-space: nowrap;
+		}
+
+		.btn-danger:hover {
+			background-color: #e11d48;
+			transform: translateY(-5px);
+			box-shadow: 0 15px 30px rgba(244, 63, 94, 0.4);
+		}
 	</style>
 </BaseLayout>
+
