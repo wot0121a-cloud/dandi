@@ -1,0 +1,164 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { characters } from '../data/site-data.json';
+
+const title = "Karakterek (Toonok)";
+const description = "Minden, amit a Dandy's World karaktereiről tudni érdemes. Statisztikák, képességek és szerepkörök.";
+---
+
+<BaseLayout title={title} description={description}>
+	<div class="header">
+		<h1>Karakterek (Toonok)</h1>
+		<p>Ismerd meg a Gardenview Center lakóit!</p>
+	</div>
+
+	<div class="char-grid">
+		{characters.map((char) => (
+			<article class="char-card" id={char.id}>
+				<div class={`role-badge bg-${char.color}`}>{char.role}</div>
+				
+				<div class="char-info">
+					<h2 class="char-name">{char.name}</h2>
+					<p class="char-desc">{char.description}</p>
+				</div>
+
+				<div class="stats-container">
+					{Object.entries(char.stats).map(([stat, value]) => (
+						<div class="stat-row">
+							<span class="stat-label">{stat === 'speed' ? 'Sebesség' : 
+													stat === 'stamina' ? 'Stamina' : 
+													stat === 'stealth' ? 'Lopakodás' : 'Szerelés'}</span>
+							<div class="stat-bar">
+								<div class={`stat-fill bg-${char.color}`} style={`width: ${value * 20}%`}></div>
+							</div>
+							<span class="stat-value">{value}/5</span>
+						</div>
+					))}
+				</div>
+
+				<div class="ability-box">
+					<span class="ability-label">KÜLÖNLEGES KÉPESSÉG</span>
+					<p class="ability-text">{char.ability}</p>
+				</div>
+			</article>
+		))}
+	</div>
+
+	<style>
+		.header {
+			margin-bottom: 4rem;
+			text-align: center;
+		}
+
+		.char-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+			gap: 2.5rem;
+		}
+
+		.char-card {
+			background: hsl(var(--bg-secondary));
+			border-radius: 28px;
+			padding: 2.5rem;
+			border: 1px solid hsl(var(--border-color));
+			display: flex;
+			flex-direction: column;
+			gap: 1.5rem;
+			transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+
+		.char-card:hover {
+			transform: scale(1.02);
+		}
+
+		.role-badge {
+			display: inline-block;
+			align-self: flex-start;
+			padding: 0.4rem 1rem;
+			border-radius: 12px;
+			font-size: 0.75rem;
+			font-weight: 900;
+			text-transform: uppercase;
+			color: white;
+		}
+
+		.char-name {
+			font-size: 2rem;
+			margin-bottom: 0.5rem;
+		}
+
+		.char-desc {
+			color: hsl(var(--text-secondary));
+			font-size: 1rem;
+		}
+
+		.stats-container {
+			display: flex;
+			flex-direction: column;
+			gap: 0.75rem;
+		}
+
+		.stat-row {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			font-size: 0.8125rem;
+		}
+
+		.stat-label {
+			width: 80px;
+			font-weight: 700;
+			color: hsl(var(--text-secondary));
+		}
+
+		.stat-bar {
+			flex: 1;
+			height: 8px;
+			background: hsl(var(--bg-primary));
+			border-radius: 4px;
+			overflow: hidden;
+		}
+
+		.stat-fill {
+			height: 100%;
+			border-radius: 4px;
+		}
+
+		.stat-value {
+			width: 30px;
+			font-weight: 900;
+			text-align: right;
+		}
+
+		.ability-box {
+			margin-top: 1rem;
+			padding: 1.25rem;
+			background: hsl(var(--bg-primary));
+			border-radius: 18px;
+			border: 1px dashed hsl(var(--border-color));
+		}
+
+		.ability-label {
+			display: block;
+			font-size: 0.625rem;
+			font-weight: 900;
+			letter-spacing: 0.05em;
+			margin-bottom: 0.5rem;
+			opacity: 0.6;
+		}
+
+		.ability-text {
+			font-weight: 700;
+			font-size: 0.875rem;
+			margin: 0;
+		}
+
+		/* Colors */
+		.bg-blue { background-color: #3b82f6; }
+		.bg-pink { background-color: #ec4899; }
+		.bg-violet { background-color: #8b5cf6; }
+		.bg-red { background-color: #ef4444; }
+		.bg-amber { background-color: #f59e0b; }
+		.bg-cyan { background-color: #06b6d4; }
+	</style>
+</BaseLayout>

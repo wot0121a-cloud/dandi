@@ -1,0 +1,137 @@
+{
+  "navItems": [
+    { "href": "/", "label": "Főoldal", "icon": "home" },
+    { "href": "/toon-kapcsolatok", "label": "Toon-kapcsolatok", "icon": "users" },
+    { "href": "/karakterek", "label": "Karakterek (Toonok)", "icon": "sparkles" },
+    { "href": "/twisted-toonok", "label": "Twisted Toonok", "icon": "ghost" },
+    { "href": "/rolunk", "label": "Rólunk", "icon": "info" }
+  ],
+  "toonCards": [
+    {
+      "id": "goob-scraps",
+      "title": "Tudtad, hogy Goob és Scraps testvérek?",
+      "description": "A játék hivatalos leírásaiból és a karakterek interakcióiból egyértelműen kiderül, hogy ők ketten testvérek. Goob mindig próbál vigyázni Scrapsre a veszélyesebb szinteken.",
+      "status": "Hivatalos",
+      "featured": true,
+      "color": "sky"
+    },
+    {
+      "id": "dandy-theory",
+      "title": "Mi a helyzet Dandy és a többiek valódi céljával?",
+      "description": "Sok játékos szerint Dandy valójában nem segíteni akar, hanem szándékosan ejti csapdába a Toonokat. Erre utal a mosolya és néhány elrejtett hangüzenet a harmadik szinten.",
+      "status": "Pletyka",
+      "featured": true,
+      "color": "rose"
+    },
+    {
+      "id": "boxten-poppy",
+      "title": "Boxten és Poppy barátsága",
+      "description": "Boxten és Poppy gyakran láthatóak együtt a hivatalos grafikákon, és a játékban is vannak speciális hangsávjaik, ha egymás közelében vannak. Ez az egyik legstabilabb barátság a játékban.",
+      "status": "Hivatalos",
+      "featured": false,
+      "color": "emerald"
+    },
+    {
+      "id": "astro-controller",
+      "title": "Astro titkos irányítója?",
+      "description": "Egyes teóriák szerint Astro mozgását és döntéseit a háttérből valaki más irányítja, mivel az animációi néha szándékosan szaggatottak és mechanikusak.",
+      "status": "Pletyka",
+      "featured": false,
+      "color": "purple"
+    }
+  ],
+  "characters": [
+    {
+      "id": "boxten",
+      "name": "Boxten",
+      "role": "Szerelő",
+      "description": "Kiegyensúlyozott kezdő karakter, tökéletes a gépek javításához és a játék alapjainak elsajátításához.",
+      "ability": "Doboztitok: Nagyobb eséllyel talál extra Ichor kapszulákat a fiókokban.",
+      "stats": { "speed": 3, "stamina": 3, "stealth": 3, "extraction": 4 },
+      "color": "blue"
+    },
+    {
+      "id": "poppy",
+      "name": "Poppy",
+      "role": "Támogató / Csalétek",
+      "description": "Vidám és rendkívül gyors, de hamar elfárad. Jól vonja magára a szörnyek figyelmét.",
+      "ability": "Cukiság: A közvetlen közelében lévő többi Toon gyorsabban szereli a gépeket.",
+      "stats": { "speed": 5, "stamina": 2, "stealth": 3, "extraction": 2 },
+      "color": "pink"
+    },
+    {
+      "id": "goob",
+      "name": "Goob",
+      "role": "Támogató",
+      "description": "Kicsit lassabb, de imád ölelni. Remek választás, ha a csapat túlélését akarod biztosítani.",
+      "ability": "Hatalmas Ölelés: Rövid időre képes megállítani (stun) egy Twisted Toont, ha a közelébe ér.",
+      "stats": { "speed": 2, "stamina": 4, "stealth": 2, "extraction": 3 },
+      "color": "violet"
+    },
+    {
+      "id": "shrimpo",
+      "name": "Shrimpo",
+      "role": "Nehezített mód",
+      "description": "Állandóan dühös és borzalmasak a statisztikái. Csak a legprofibb játékosoknak ajánlott kihívásként.",
+      "ability": "Vak Düh: Minél kevesebb élete van, annál hangosabban panaszkodik (nincs valódi előnye).",
+      "stats": { "speed": 1, "stamina": 1, "stealth": 1, "extraction": 1 },
+      "color": "red"
+    },
+    {
+      "id": "pebble",
+      "name": "Pebble",
+      "role": "Felderítő",
+      "description": "Ez a kutyaként viselkedő kődarab hihetetlenül fürge és nehéz észrevenni, de a gépekhez nem sokat konyít.",
+      "ability": "Kavics Futás: Képes egy hatalmasat előre ugrani (dash), hogy kikerülje a szörnyeket.",
+      "stats": { "speed": 5, "stamina": 4, "stealth": 5, "extraction": 1 },
+      "color": "amber"
+    },
+    {
+      "id": "shelly",
+      "name": "Shelly",
+      "role": "Szerelő / Lopakodó",
+      "description": "A gondoskodó kagylólány. Lassan mozog, de ha egyszer elkezd egy gépet szerelni, nagyon hatékony.",
+      "ability": "Páncél: A lopakodása szinte hangtalanná teszi, nehezen veszik észre a Twisteds-ek.",
+      "stats": { "speed": 2, "stamina": 3, "stealth": 5, "extraction": 5 },
+      "color": "cyan"
+    }
+  ],
+  "twisteds": [
+    {
+      "id": "twisted-dandy",
+      "name": "Twisted Dandy",
+      "danger": "Extrém",
+      "mechanic": "Nem egy adott gépet véd, hanem véletlenszerűen bukkan fel. Ha meglát, esélyed sincs elfutni előle nyílt terepen.",
+      "tip": "Soha ne fuss egyenes vonalban. Használd a sarkokat, bújj el azonnal, és kapcsold ki a zseblámpád. Ne próbáld lefutni.",
+      "color": "twistedDandy",
+      "accent": "rose"
+    },
+    {
+      "id": "twisted-shrimpo",
+      "name": "Twisted Shrimpo",
+      "danger": "Magas",
+      "mechanic": "Nagyon agresszív. Ha meghall egy elrontott gépet, azonnal odarohan. Látása viszont nem a legjobb.",
+      "tip": "Könnyen loopolható: ha egy nagy asztal vagy polc körül futsz, nehezebben veszi be a kanyarokat, így időt nyerhetsz a csapatnak.",
+      "color": "twistedShrimpo",
+      "accent": "red"
+    },
+    {
+      "id": "twisted-pebble",
+      "name": "Twisted Pebble",
+      "danger": "Közepes",
+      "mechanic": "Hihetetlenül gyorsan mozog a pályán, kutyaként szimatolva. Hamar észrevesz, ha futsz.",
+      "tip": "Lopakodj. Ha lopakodsz, szinte átsétálhatsz mellette anélkül, hogy észrevenne. Ne kelts zajt a közelében.",
+      "color": "twistedPebble",
+      "accent": "amber"
+    },
+    {
+      "id": "twisted-poppy",
+      "name": "Twisted Poppy",
+      "danger": "Közepes",
+      "mechanic": "Hangosan sír és nevet felváltva. Nagyon messzire ellát a folyosókon, és gyorsan a nyomodba ered.",
+      "tip": "Törd meg a látóterét. Keress ajtókat és sarkokat, mert ha nem lát közvetlenül, hamar feladja az üldözést.",
+      "color": "twistedPoppy",
+      "accent": "pink"
+    }
+  ]
+}

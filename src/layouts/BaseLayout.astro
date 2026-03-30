@@ -1,0 +1,131 @@
+---
+import '../styles/global.css';
+import { navItems } from '../data/site-data.json';
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { 
+	title = "Dandy's World Magyar Rajongói Oldal", 
+	description = "Karakter statisztikák, Toon-kapcsolatok, Twisted túlélési tippek és rajongói teóriák magyarul." 
+} = Astro.props;
+
+const fullTitle = title.includes("Dandy's World") ? title : `${title} | Dandy's World Magyar Rajongói Oldal`;
+---
+
+<!doctype html>
+<html lang="hu">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{fullTitle}</title>
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container h-full flex items-center justify-between">
+				<a href="/" class="brand">
+					<div class="logo-box">D</div>
+					<span class="brand-text">Dandy's Hub</span>
+				</a>
+				
+				<nav class="desktop-nav">
+					{navItems.map((item) => (
+						<a href={item.href} class="nav-link">{item.label}</a>
+					))}
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<slot />
+		</main>
+
+		<footer class="site-footer">
+			<div class="container">
+				<div class="footer-icon">👥</div>
+				<p class="copyright">© 2026 Dandy's World Magyar Rajongói Oldal</p>
+				<p class="disclaimer">
+					Ez egy rajongók által készített, nem hivatalos weboldal. A Dandy's World,
+					a karakterek és a játék grafikai elemei az eredeti fejlesztők tulajdonát képezik.
+				</p>
+			</div>
+		</footer>
+
+		<style>
+			.h-full { height: 100%; }
+			.flex { display: flex; }
+			.items-center { align-items: center; }
+			.justify-between { justify-content: space-between; }
+
+			.brand {
+				display: flex;
+				align-items: center;
+				gap: 0.75rem;
+				font-size: 1.25rem;
+				font-weight: 900;
+				color: hsl(var(--text-primary));
+			}
+
+			.logo-box {
+				width: 40px;
+				height: 40px;
+				border-radius: 12px;
+				background: linear-gradient(135deg, hsl(var(--accent-primary)), hsl(var(--accent-secondary)));
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: white;
+				font-size: 1.25rem;
+				box-shadow: 0 4px 12px hsla(var(--accent-primary), 0.3);
+			}
+
+			.desktop-nav {
+				display: none;
+				gap: 0.5rem;
+			}
+
+			@media (min-width: 768px) {
+				.desktop-nav {
+					display: flex;
+				}
+			}
+
+			.nav-link {
+				padding: 0.5rem 1rem;
+				border-radius: 10px;
+				font-weight: 700;
+				font-size: 0.875rem;
+				color: hsl(var(--text-secondary));
+			}
+
+			.nav-link:hover {
+				background-color: hsl(var(--bg-primary));
+				color: hsl(var(--text-primary));
+			}
+
+			.footer-icon {
+				font-size: 2rem;
+				margin-bottom: 1rem;
+				display: inline-block;
+				transform: rotate(12deg);
+			}
+
+			.copyright {
+				font-weight: 900;
+				margin-bottom: 0.5rem;
+			}
+
+			.disclaimer {
+				font-size: 0.875rem;
+				color: hsl(var(--text-secondary));
+				max-width: 600px;
+				margin: 0 auto;
+			}
+		</style>
+	</body>
+</html>
