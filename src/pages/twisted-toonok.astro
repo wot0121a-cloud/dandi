@@ -1,0 +1,140 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { twisteds } from '../data/site-data.json';
+
+const title = "Twisted Toonok & Túlélési Tippek";
+const description = "Ismerd meg a Twisted változataikat! Hogyan kerüld el őket, mik a gyenge pontjaik, és hogyan éld túl a velük való találkozást.";
+---
+
+<BaseLayout title={title} description={description}>
+	<div class="header">
+		<h1 class="twisted-glow">Twisted Toonok</h1>
+		<p>A Gardenview Center sötét oldala. Vigyázz, ne kerülj a látóterükbe!</p>
+	</div>
+
+	<div class="twisted-grid">
+		{twisteds.map((twisted) => (
+			<article class="twisted-card" id={twisted.id}>
+				<div class="card-inner">
+					<div class="top-section">
+						<div class="danger-indicator">
+							<span class="danger-label">VESZÉLYESSÉG:</span>
+							<span class={`danger-value danger-${twisted.danger.toLowerCase()}`}>{twisted.danger}</span>
+						</div>
+						<h2 class="twisted-name">{twisted.name}</h2>
+					</div>
+					
+					<div class="mechanic-box">
+						<h3 class="box-title">Hogyan működik?</h3>
+						<p>{twisted.mechanic}</p>
+					</div>
+
+					<div class="tip-box" style={`border-left: 4px solid var(--accent-${twisted.accent})`}>
+						<h3 class="box-title">Túlélési tipp</h3>
+						<p>{twisted.tip}</p>
+					</div>
+				</div>
+			</article>
+		))}
+	</div>
+
+	<style>
+		.header {
+			margin-bottom: 5rem;
+			text-align: center;
+		}
+
+		.twisted-glow {
+			font-size: 3.5rem;
+			color: hsl(var(--text-primary));
+			text-shadow: 0 0 20px hsla(var(--accent-primary), 0.1);
+		}
+
+		.twisted-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+			gap: 3rem;
+		}
+
+		.twisted-card {
+			background: #111;
+			background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+			color: #eee;
+			border-radius: 32px;
+			padding: 2.5rem;
+			position: relative;
+			overflow: hidden;
+			border: 1px solid #333;
+			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+
+		.twisted-card:hover {
+			transform: translateY(-10px) scale(1.01);
+			border-color: #555;
+			box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+		}
+
+		.danger-indicator {
+			margin-bottom: 0.5rem;
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			font-size: 0.75rem;
+			font-weight: 900;
+		}
+
+		.danger-label {
+			opacity: 0.5;
+		}
+
+		.danger-value {
+			padding: 0.15rem 0.5rem;
+			border-radius: 6px;
+		}
+
+		.danger-extrém { color: #f43f5e; background: rgba(244, 63, 94, 0.15); }
+		.danger-magas { color: #f59e0b; background: rgba(245, 158, 11, 0.15); }
+		.danger-közepes { color: #10b981; background: rgba(16, 185, 129, 0.15); }
+
+		.twisted-name {
+			font-size: 2.25rem;
+			margin-bottom: 2rem;
+			letter-spacing: -0.03em;
+		}
+
+		.mechanic-box, .tip-box {
+			background: rgba(255, 255, 255, 0.03);
+			padding: 1.5rem;
+			border-radius: 20px;
+			margin-bottom: 1.5rem;
+		}
+
+		.box-title {
+			font-size: 0.625rem;
+			font-weight: 900;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			margin-bottom: 0.75rem;
+			opacity: 0.6;
+		}
+
+		.mechanic-box p, .tip-box p {
+			margin: 0;
+			font-size: 0.95rem;
+			line-height: 1.5;
+		}
+
+		.tip-box {
+			background: rgba(255, 255, 255, 0.05);
+			margin-bottom: 0;
+		}
+
+		/* Accents for survivor tips */
+		:root {
+			--accent-rose: #f43f5e;
+			--accent-red: #ef4444;
+			--accent-amber: #f59e0b;
+			--accent-pink: #ec4899;
+		}
+	</style>
+</BaseLayout>
