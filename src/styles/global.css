@@ -70,18 +70,19 @@ a {
 }
 
 .hide-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;    /* Firefox */
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-  display: none;
+  display: none;            /* Chrome, Safari, and Opera */
 }
 
 /* Layout Parts */
 .site-header {
   height: var(--header-height);
   background-color: hsla(0, 0%, 100%, 0.8);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid hsl(var(--border-color));
   position: sticky;

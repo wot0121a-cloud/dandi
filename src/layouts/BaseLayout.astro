@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
-import { navItems } from '../data/site-data.json';
+import siteData from '../data/site-data.json';
+
+const { navItems } = siteData;
 
 interface Props {
 	title?: string;
@@ -33,7 +35,13 @@ const fullTitle = title.includes("Dandy's World") ? title : `${title} | Dandy's 
 					<span class="brand-text">Dandy's Hub</span>
 				</a>
 				
-				<nav class="desktop-nav">
+				<button class="mobile-toggle" aria-label="Menü megnyitása" id="menuToggle">
+					<span class="bar bar-1"></span>
+					<span class="bar bar-2"></span>
+					<span class="bar bar-3"></span>
+				</button>
+
+				<nav class="nav-menu" id="navMenu">
 					{navItems.map((item) => (
 						<a href={item.href} class="nav-link">{item.label}</a>
 					))}
@@ -56,6 +64,17 @@ const fullTitle = title.includes("Dandy's World") ? title : `${title} | Dandy's 
 			</div>
 		</footer>
 
+		<script>
+			const menuToggle = document.getElementById('menuToggle');
+			const navMenu = document.getElementById('navMenu');
+
+			menuToggle?.addEventListener('click', () => {
+				menuToggle.classList.toggle('active');
+				navMenu?.classList.toggle('active');
+				document.body.classList.toggle('menu-open');
+			});
+		</script>
+
 		<style>
 			.h-full { height: 100%; }
 			.flex { display: flex; }
@@ -69,6 +88,7 @@ const fullTitle = title.includes("Dandy's World") ? title : `${title} | Dandy's 
 				font-size: 1.25rem;
 				font-weight: 900;
 				color: hsl(var(--text-primary));
+				z-index: 1001;
 			}
 
 			.logo-box {
@@ -84,14 +104,62 @@ const fullTitle = title.includes("Dandy's World") ? title : `${title} | Dandy's 
 				box-shadow: 0 4px 12px hsla(var(--accent-primary), 0.3);
 			}
 
-			.desktop-nav {
-				display: none;
-				gap: 0.5rem;
+			/* Navigation */
+			.mobile-toggle {
+				display: flex;
+				flex-direction: column;
+				gap: 5px;
+				background: none;
+				border: none;
+				padding: 10px;
+				cursor: pointer;
+				z-index: 1001;
 			}
 
 			@media (min-width: 768px) {
-				.desktop-nav {
-					display: flex;
+				.mobile-toggle { display: none; }
+			}
+
+			.bar {
+				width: 24px;
+				height: 3px;
+				background: hsl(var(--text-primary));
+				border-radius: 3px;
+				transition: all 0.3s ease;
+			}
+
+			.mobile-toggle.active .bar-1 { transform: translateY(8px) rotate(45deg); }
+			.mobile-toggle.active .bar-2 { opacity: 0; }
+			.mobile-toggle.active .bar-3 { transform: translateY(-8px) rotate(-45deg); }
+
+			.nav-menu {
+				position: fixed;
+				top: 0;
+				right: -100%;
+				width: 100%;
+				height: 100vh;
+				background: white;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: 2rem;
+				transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+				z-index: 1000;
+			}
+
+			.nav-menu.active {
+				right: 0;
+			}
+
+			@media (min-width: 768px) {
+				.nav-menu {
+					position: static;
+					width: auto;
+					height: auto;
+					background: none;
+					flex-direction: row;
+					gap: 0.5rem;
 				}
 			}
 
@@ -99,8 +167,14 @@ const fullTitle = title.includes("Dandy's World") ? title : `${title} | Dandy's 
 				padding: 0.5rem 1rem;
 				border-radius: 10px;
 				font-weight: 700;
-				font-size: 0.875rem;
+				font-size: 1.25rem;
 				color: hsl(var(--text-secondary));
+			}
+
+			@media (min-width: 768px) {
+				.nav-link {
+					font-size: 0.875rem;
+				}
 			}
 
 			.nav-link:hover {
