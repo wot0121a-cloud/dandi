@@ -1,63 +1,371 @@
 {
   "navItems": [
-    { "href": "/", "label": "Főoldal", "icon": "home" },
-    { "href": "/toon-kapcsolatok", "label": "Toon-kapcsolatok", "icon": "users" },
-    { "href": "/karakterek", "label": "Karakterek (Toonok)", "icon": "sparkles" },
-    { "href": "/twisted-toonok", "label": "Twisted Toonok", "icon": "ghost" },
-    { "href": "/rolunk", "label": "Rólunk", "icon": "info" }
+    {
+      "href": "/",
+      "label": "Főoldal",
+      "icon": "home"
+    },
+    {
+      "href": "/toon-kapcsolatok",
+      "label": "Toon-kapcsolatok",
+      "icon": "users"
+    },
+    {
+      "href": "/karakterek",
+      "label": "Karakterek (Toonok)",
+      "icon": "sparkles"
+    },
+    {
+      "href": "/twisted-toonok",
+      "label": "Twisted Toonok",
+      "icon": "ghost"
+    },
+    {
+      "href": "/rolunk",
+      "label": "Rólunk",
+      "icon": "info"
+    }
   ],
   "toonCards": [
     {
-      "id": "goob-scraps",
-      "title": "Tudtad, hogy Goob és Scraps testvérek?",
-      "description": "A játék hivatalos leírásaiból és a karakterek interakcióiból egyértelműen kiderül, hogy ők ketten testvérek. Goob mindig próbál vigyázni Scrapsre a veszélyesebb szinteken.",
-      "status": "Hivatalos",
-      "featured": true,
-      "color": "sky"
+      "id": "card-a-twisted-toonok-eml-keznek-",
+      "title": "A Twisted Toonok emlékeznek?",
+      "status": "Pletyka",
+      "description": "Néhány játékos megfigyelte, hogy a megfertőzött (Twisted) Toonok néha haboznak, ha a régi legjobb barátjukkal találkoznak a folyosón.",
+      "featured": false,
+      "color": "purple"
     },
     {
-      "id": "dandy-theory",
-      "title": "Mi a helyzet Dandy és a többiek valódi céljával?",
-      "description": "Sok játékos szerint Dandy valójában nem segíteni akar, hanem szándékosan ejti csapdába a Toonokat. Erre utal a mosolya és néhány elrejtett hangüzenet a harmadik szinten.",
+      "id": "card-amoeba-s-az-r-cosmo-s-sprout-",
+      "title": "Amoeba és az Űr (Cosmo és Sprout)",
       "status": "Pletyka",
+      "description": "Sprout (a növény) és Cosmo (az űrhajós) állítólag titokban a létezés nagy kérdéseiről beszélgetnek a liftekben, közös a filozofikus oldaluk.",
+      "featured": false,
+      "color": "cyan"
+    },
+    {
+      "id": "card-astro-s-vee-technol-giai-k-tel-ke",
+      "title": "Astro és Vee technológiai köteléke",
+      "status": "Pletyka",
+      "description": "Mivel mindketten \"gépesített\" vagy futurisztikus karakterek, a rajongók szerint titkos, bináris kódon alapuló nyelven kommunikálnak egymással.",
+      "featured": false,
+      "color": "slate"
+    },
+    {
+      "id": "card-astro-titkos-ir-ny-t-ja-",
+      "title": "Astro titkos irányítója?",
+      "status": "Pletyka",
+      "description": "Egyes teóriák szerint Astro mozgását a háttérből valaki más irányítja, mivel animációi néha szándékosan szaggatottak és mechanikusak.",
+      "featured": false,
+      "color": "slate"
+    },
+    {
+      "id": "card-boxten-s-astro-cipelik-egym-st",
+      "title": "Boxten és Astro cipelik egymást",
+      "status": "Pletyka",
+      "description": "Egy népszerű, vicces rajongói teória szerint, ha Astro elfárad, bealszik Boxten dobozába, és a szerelő cipeli őt végig az emeleteken.",
+      "featured": false,
+      "color": "slate"
+    },
+    {
+      "id": "card-boxten-s-poppy-bar-ts-ga",
+      "title": "Boxten és Poppy barátsága",
+      "status": "Hivatalos",
+      "description": "Gyakran láthatóak együtt a hivatalos grafikákon, és speciális hangsávjaik vannak, ha egymás közelében vannak. Stabil barátság.",
+      "featured": false,
+      "color": "blue"
+    },
+    {
+      "id": "card-brightney-seg-ti-a-takar-t-st",
+      "title": "Brightney segíti a takarítást",
+      "status": "Pletyka",
+      "description": "Tisha és Brightney állítólag jó barátnők, mert Brightney erős fénye segít Tishának észrevenni a legapróbb porszemeket is a sötét sarkokban.",
+      "featured": false,
+      "color": "yellow"
+    },
+    {
+      "id": "card-cosmo-s-astro-az-elm-let-",
+      "title": "Cosmo és Astro (Az Elmélet)",
+      "status": "Hivatalos",
+      "description": "Astro gyakran az egyetlen, aki türelmesen, lehunyt szemmel végighallgatja Cosmo végeláthatatlan, unalmas monológjait a galaxisokról.",
+      "featured": false,
+      "color": "slate"
+    },
+    {
+      "id": "card-dandy-teremtette-a-twistedeket",
+      "title": "Dandy teremtette a Twistedeket",
+      "status": "Pletyka",
+      "description": "A legsötétebb teória: Dandy maga fertőzte meg Ichorral az eredeti Toonokat, hogy hűséges, engedelmes Twisted szörnyeket csináljon belőlük.",
+      "featured": false,
+      "color": "rose"
+    },
+    {
+      "id": "card-dandy-val-di-c-lja",
+      "title": "Dandy valódi célja",
+      "status": "Pletyka",
+      "description": "Sok játékos szerint Dandy valójában nem segíteni akar, hanem szándékosan ejti csapdába a Toonokat. Erre utal a manipulatív mosolya.",
       "featured": true,
       "color": "rose"
     },
     {
-      "id": "boxten-poppy",
-      "title": "Boxten és Poppy barátsága",
-      "description": "Boxten és Poppy gyakran láthatóak együtt a hivatalos grafikákon, és a játékban is vannak speciális hangsávjaik, ha egymás közelében vannak. Ez az egyik legstabilabb barátság a játékban.",
+      "id": "card-finn-s-pebble-j-tszanak",
+      "title": "Finn és Pebble játszanak",
       "status": "Hivatalos",
+      "description": "A vizes Finn az egyetlen, aki hajlandó dobálni a botot (vagy a csavarkulcsot) Pebble-nek. Nagyon aranyos, hivatalos barátság a játékban.",
       "featured": false,
-      "color": "emerald"
+      "color": "sky"
     },
     {
-      "id": "astro-controller",
-      "title": "Astro titkos irányítója?",
-      "description": "Egyes teóriák szerint Astro mozgását és döntéseit a háttérből valaki más irányítja, mivel az animációi néha szándékosan szaggatottak és mechanikusak.",
+      "id": "card-flutter-s-poppy-bar-tn-k",
+      "title": "Flutter és Poppy barátnők",
+      "status": "Hivatalos",
+      "description": "A pillangó és a virág elválaszthatatlanok. Ha egy csapatban vannak, kifejezetten vidám, csicsergő hangokat adnak ki egymás közelében.",
+      "featured": false,
+      "color": "indigo"
+    },
+    {
+      "id": "card-glisten-s-pebble-ellent-te",
+      "title": "Glisten és Pebble ellentéte",
+      "status": "Hivatalos",
+      "description": "A hiú Glisten hivatalos lore szerint mélységesen megveti Pebble-t, a kutyaként viselkedő koszos követ, mert szerinte rontja a dizájnt.",
+      "featured": false,
+      "color": "fuchsia"
+    },
+    {
+      "id": "card-glisten-f-lt-keny-brightney-re",
+      "title": "Glisten féltékeny Brightney-re",
       "status": "Pletyka",
+      "description": "Glisten azt hiszi, ő a legfényesebb sztár. A játékosok szerint titokban gyűlöli Brightney-t, mert a villanykörte szó szerint \"túlragyogja\" őt.",
+      "featured": true,
+      "color": "yellow"
+    },
+    {
+      "id": "card-goob-s-scraps-testv-rek",
+      "title": "Goob és Scraps testvérek",
+      "status": "Hivatalos",
+      "description": "A játék hivatalos leírásaiból egyértelműen kiderül, hogy ők ketten testvérek. Goob mindig próbál vigyázni Scrapsre a veszélyesebb szinteken.",
+      "featured": false,
+      "color": "violet"
+    },
+    {
+      "id": "card-goob-hal-los-lel-se",
+      "title": "Goob halálos ölelése",
+      "status": "Hivatalos",
+      "description": "Shrimpo hivatalosan is gyűlöli Goobot, mert a hosszú karú Toon folyton meg akarja őt ölelni, ami Shrimpo számára a legrosszabb rémálom.",
+      "featured": false,
+      "color": "violet"
+    },
+    {
+      "id": "card-pebble-kuty-s-viselked-se",
+      "title": "Pebble kutyás viselkedése",
+      "status": "Hivatalos",
+      "description": "Bár Pebble egy beszélő kődarab, a játékban egyértelműen kutyaként viselkedik. Ugat, morog, és ő a csapat nem hivatalos háziállata.",
+      "featured": false,
+      "color": "amber"
+    },
+    {
+      "id": "card-pebble-megugatja-shrimpo-t",
+      "title": "Pebble megugatja Shrimpo-t",
+      "status": "Pletyka",
+      "description": "Állítólag Pebble érzi a \"rossz energiákat\", ezért valahányszor Shrimpo elmegy mellette, agresszíven morogni és ugatni kezd rá.",
+      "featured": false,
+      "color": "amber"
+    },
+    {
+      "id": "card-poppy-t-l-hangos-glisten-nek",
+      "title": "Poppy túl hangos Glisten-nek",
+      "status": "Hivatalos",
+      "description": "Glisten a csendet és az eleganciát szereti, míg Poppy folyamatosan vidáman kiabál és ugrál. Glisten hivatalosan is kerüli a társaságát.",
+      "featured": false,
+      "color": "fuchsia"
+    },
+    {
+      "id": "card-razzle-s-dandy-sz-nh-zi-m-ltja",
+      "title": "Razzle és Dandy színházi múltja",
+      "status": "Pletyka",
+      "description": "A maszkos dizájn miatt a rajongók azt rebesgetik, hogy Razzle és Dazzle régen Dandy személyes szórakoztatói vagy udvari bolondjai voltak a katasztrófa előtt.",
+      "featured": false,
+      "color": "rose"
+    },
+    {
+      "id": "card-razzle-s-dazzle-trag-di-ja",
+      "title": "Razzle és Dazzle tragédiája",
+      "status": "Hivatalos",
+      "description": "A fejlesztők megerősítették: ők ketten szó szerint egy testbe zárt két elme, akik folyamatosan harcolnak az irányításért.",
+      "featured": false,
+      "color": "purple"
+    },
+    {
+      "id": "card-scraps-s-boxten-g-p-szeti-vit-i",
+      "title": "Scraps és Boxten gépészeti vitái",
+      "status": "Pletyka",
+      "description": "Bár mindketten kiváló szerelők, a játékosok szerint folyamatosan rivalizálnak azon, hogy kinek a javítási módszere a hatékonyabb.",
+      "featured": true,
+      "color": "blue"
+    },
+    {
+      "id": "card-shelly-s-goob-any-skod-s-",
+      "title": "Shelly és Goob (Anyáskodás)",
+      "status": "Pletyka",
+      "description": "A rajongók megfigyelték, hogy Shelly gyakran marad Goob közelében, mintha egyfajta pótanyaként próbálná védeni a szeleburdi Toont.",
+      "featured": false,
+      "color": "violet"
+    },
+    {
+      "id": "card-shrimpo-ut-l-mindenkit",
+      "title": "Shrimpo utál mindenkit",
+      "status": "Hivatalos",
+      "description": "Shrimpo hivatalosan is a legellenségesebb karakter. Folyamatosan dühös és agresszív a többiekkel, senkit nem tűr meg maga mellett.",
+      "featured": false,
+      "color": "red"
+    },
+    {
+      "id": "card-sprout-tudja-az-igazat-dandy-r-l",
+      "title": "Sprout tudja az igazat Dandy-ről",
+      "status": "Pletyka",
+      "description": "Mivel Dandy is virág formájú, sokan hiszik, hogy Sprout, a kis eper-palánta átlát Dandy kedves álcáján, és tudja a valódi, sötét természetét.",
+      "featured": false,
+      "color": "lime"
+    },
+    {
+      "id": "card-teagan-s-shelly-teapartijai",
+      "title": "Teagan és Shelly teapartijai",
+      "status": "Hivatalos",
+      "description": "A hivatalos grafikákon gyakran látni Teagan-t, amint nyugtató teát tölt Shelly-nek. Ez a csapat két legnyugodtabb tagjának privát rituáléja.",
+      "featured": false,
+      "color": "teal"
+    },
+    {
+      "id": "card-teagan-nyugtatja-boxtent",
+      "title": "Teagan nyugtatja Boxtent",
+      "status": "Hivatalos",
+      "description": "Boxten nagyon hajlamos a pánikra, amikor a gépek elromlanak. A lore szerint Teagan az egyetlen, aki képes lecsillapítani őt a teájával.",
+      "featured": false,
+      "color": "blue"
+    },
+    {
+      "id": "card-tisha-s-scraps-ellent-te",
+      "title": "Tisha és Scraps ellentéte",
+      "status": "Hivatalos",
+      "description": "Tisha számára Scraps egy rémálom. Scraps mindig olajos, koszos és fémhulladékot hagy maga után, ami Tisha tisztaságmániáját teljesen kiakasztja.",
+      "featured": true,
+      "color": "orange"
+    },
+    {
+      "id": "card-tisha-gy-l-li-shrimpo-kosz-t",
+      "title": "Tisha gyűlöli Shrimpo koszát",
+      "status": "Hivatalos",
+      "description": "Tisha, a takarítás megszállottja hivatalosan is ki nem állhatja Shrimpot, aki amerre jár, csak szemetel és káoszt hagy maga után.",
+      "featured": false,
+      "color": "red"
+    },
+    {
+      "id": "card-vee-dandy-k-mje-",
+      "title": "Vee Dandy kémje?",
+      "status": "Pletyka",
+      "description": "Vee a képernyőjén keresztül mindent lát. Sokak szerint a beépített kamerarendszeren át megfigyeli a többieket, és mindent jelent Dandy-nek.",
       "featured": false,
       "color": "purple"
     }
   ],
   "characters": [
     {
+      "id": "astro",
+      "name": "Astro",
+      "role": "Túlélő / Csalétek",
+      "description": "Cosmo elválaszthatatlan barátja, egy alvó hold. Bár mindig fáradtnak tűnik, meglepően fürge.",
+      "ability": "Kozmikus Por: Egy rövid ideig sötétségbe tud borítani egy szörnyet, esélyt adva a menekülésre.",
+      "stats": {
+        "speed": 4,
+        "stamina": 4,
+        "stealth": 3,
+        "extraction": 2
+      },
+      "color": "slate"
+    },
+    {
       "id": "boxten",
       "name": "Boxten",
       "role": "Szerelő",
       "description": "Kiegyensúlyozott kezdő karakter, tökéletes a gépek javításához és a játék alapjainak elsajátításához.",
       "ability": "Doboztitok: Nagyobb eséllyel talál extra Ichor kapszulákat a fiókokban.",
-      "stats": { "speed": 3, "stamina": 3, "stealth": 3, "extraction": 4 },
+      "stats": {
+        "speed": 3,
+        "stamina": 3,
+        "stealth": 3,
+        "extraction": 4
+      },
       "color": "blue"
     },
     {
-      "id": "poppy",
-      "name": "Poppy",
-      "role": "Támogató / Csalétek",
-      "description": "Vidám és rendkívül gyors, de hamar elfárad. Jól vonja magára a szörnyek figyelmét.",
-      "ability": "Cukiság: A közvetlen közelében lévő többi Toon gyorsabban szereli a gépeket.",
-      "stats": { "speed": 5, "stamina": 2, "stealth": 3, "extraction": 2 },
-      "color": "pink"
+      "id": "brightney",
+      "name": "Brightney",
+      "role": "Támogató / Látvány",
+      "description": "Egy sétáló villanykörte, aki bevilágítja a legsötétebb (Blackout) szinteket is a csapatnak.",
+      "ability": "Reflektor: Automatikusan világít maga körül a sötét szinteken, így nem kell zseblámpát vennie.",
+      "stats": {
+        "speed": 3,
+        "stamina": 3,
+        "stealth": 1,
+        "extraction": 4
+      },
+      "color": "yellow"
+    },
+    {
+      "id": "cosmo",
+      "name": "Cosmo",
+      "role": "Támogató",
+      "description": "Folyton a csillagokról álmodozó űrhajós fánk. Lassú, de nagyon hasznos kiegészítője a csapatnak.",
+      "ability": "Zéró Gravitáció: Amíg fut, a lépései halkabbak a megszokottnál, mintha a levegőben lépkedne.",
+      "stats": {
+        "speed": 2,
+        "stamina": 5,
+        "stealth": 4,
+        "extraction": 2
+      },
+      "color": "cyan"
+    },
+    {
+      "id": "finn",
+      "name": "Finn",
+      "role": "Szerelő / Túlélő",
+      "description": "Egy uszonyos hal-Toon, aki bár vízi lény, meglepően jól boldogul a Dandy's World száraz folyosóin.",
+      "ability": "Csúszós: A szörnyek lassabban fókuszálnak rá, ha látóterükbe kerül.",
+      "stats": {
+        "speed": 3,
+        "stamina": 4,
+        "stealth": 3,
+        "extraction": 4
+      },
+      "color": "sky"
+    },
+    {
+      "id": "flutter",
+      "name": "Flutter",
+      "role": "Felderítő",
+      "description": "Csendes és félénk pillangó Toon. Kevés állóképessége van, de kiváló a gépek feltérképezésében.",
+      "ability": "Rebbenés: Amikor sebzést kap, egy extra sebesség-löketet kap a túléléshez.",
+      "stats": {
+        "speed": 4,
+        "stamina": 2,
+        "stealth": 5,
+        "extraction": 2
+      },
+      "color": "indigo"
+    },
+    {
+      "id": "glisten",
+      "name": "Glisten",
+      "role": "Csalétek",
+      "description": "Végtelenül hiú és magabiztos tükör-Toon. A saját tükörképét csodálja, de a csillogása nagyon is hasznos fegyver lehet.",
+      "ability": "Vakító Fény: Ha egy szörny közvetlenül ránéz, egy pillanatra megtorpan, mintha elvakították volna.",
+      "stats": {
+        "speed": 4,
+        "stamina": 3,
+        "stealth": 1,
+        "extraction": 2
+      },
+      "color": "fuchsia"
     },
     {
       "id": "goob",
@@ -65,17 +373,13 @@
       "role": "Támogató",
       "description": "Kicsit lassabb, de imád ölelni. Remek választás, ha a csapat túlélését akarod biztosítani.",
       "ability": "Hatalmas Ölelés: Rövid időre képes megállítani (stun) egy Twisted Toont, ha a közelébe ér.",
-      "stats": { "speed": 2, "stamina": 4, "stealth": 2, "extraction": 3 },
+      "stats": {
+        "speed": 2,
+        "stamina": 4,
+        "stealth": 2,
+        "extraction": 3
+      },
       "color": "violet"
-    },
-    {
-      "id": "shrimpo",
-      "name": "Shrimpo",
-      "role": "Nehezített mód",
-      "description": "Állandóan dühös és borzalmasak a statisztikái. Csak a legprofibb játékosoknak ajánlott kihívásként.",
-      "ability": "Vak Düh: Minél kevesebb élete van, annál hangosabban panaszkodik (nincs valódi előnye).",
-      "stats": { "speed": 1, "stamina": 1, "stealth": 1, "extraction": 1 },
-      "color": "red"
     },
     {
       "id": "pebble",
@@ -83,8 +387,55 @@
       "role": "Felderítő",
       "description": "Ez a kutyaként viselkedő kődarab hihetetlenül fürge és nehéz észrevenni, de a gépekhez nem sokat konyít.",
       "ability": "Kavics Futás: Képes egy hatalmasat előre ugrani (dash), hogy kikerülje a szörnyeket.",
-      "stats": { "speed": 5, "stamina": 4, "stealth": 5, "extraction": 1 },
+      "stats": {
+        "speed": 5,
+        "stamina": 4,
+        "stealth": 5,
+        "extraction": 1
+      },
       "color": "amber"
+    },
+    {
+      "id": "poppy",
+      "name": "Poppy",
+      "role": "Támogató / Csalétek",
+      "description": "Vidám és rendkívül gyors, de hamar elfárad. Jól vonja magára a szörnyek figyelmét.",
+      "ability": "Cukiság: A közvetlen közelében lévő többi Toon gyorsabban szereli a gépeket.",
+      "stats": {
+        "speed": 5,
+        "stamina": 2,
+        "stealth": 3,
+        "extraction": 2
+      },
+      "color": "pink"
+    },
+    {
+      "id": "razzle-dazzle",
+      "name": "Razzle & Dazzle",
+      "role": "Különleges / Támogató",
+      "description": "Két elme egy színházi maszkban. Bipoláris viselkedésűek, ami kiszámíthatatlanná, de erőssé teszi őket.",
+      "ability": "Kétarcúság: Attól függően, hogy melyik arcuk van elöl, bónuszt kapnak vagy a szerelésre (Dazzle) vagy a gyorsaságra (Razzle).",
+      "stats": {
+        "speed": 3,
+        "stamina": 3,
+        "stealth": 2,
+        "extraction": 4
+      },
+      "color": "zinc"
+    },
+    {
+      "id": "scraps",
+      "name": "Scraps",
+      "role": "Kutató / Szerelő",
+      "description": "Goob húga, igazi barkácsmászter. Szereti a hulladékból a legjobbat kihozni.",
+      "ability": "Újrahasznosítás: A sikeres Skill Check-ek után egy apró sebességnövelést kap a gép körül.",
+      "stats": {
+        "speed": 3,
+        "stamina": 3,
+        "stealth": 2,
+        "extraction": 5
+      },
+      "color": "orange"
     },
     {
       "id": "shelly",
@@ -92,35 +443,173 @@
       "role": "Szerelő / Lopakodó",
       "description": "A gondoskodó kagylólány. Lassan mozog, de ha egyszer elkezd egy gépet szerelni, nagyon hatékony.",
       "ability": "Páncél: A lopakodása szinte hangtalanná teszi, nehezen veszik észre a Twisteds-ek.",
-      "stats": { "speed": 2, "stamina": 3, "stealth": 5, "extraction": 5 },
-      "color": "cyan"
+      "stats": {
+        "speed": 2,
+        "stamina": 3,
+        "stealth": 5,
+        "extraction": 5
+      },
+      "color": "teal"
+    },
+    {
+      "id": "shrimpo",
+      "name": "Shrimpo",
+      "role": "Nehezített mód",
+      "description": "Állandóan dühös és borzalmasak a statisztikái. Csak a legprofibb játékosoknak ajánlott kihívásként!",
+      "ability": "Vak Düh: Minél kevesebb élete van, annál hangosabban panaszkodik (nincs valódi előnye).",
+      "stats": {
+        "speed": 1,
+        "stamina": 1,
+        "stealth": 1,
+        "extraction": 1
+      },
+      "color": "red"
+    },
+    {
+      "id": "sprout",
+      "name": "Sprout",
+      "role": "Túlélő / Lopakodó",
+      "description": "Félénk eper-növény Toon. Szereti a természetet, és kiválóan rejtőzködik a sötétebb pályarészeken.",
+      "ability": "Gyökerezés: Ha egy helyben áll és lopakodik (crouch), sokkal gyorsabban regenerálódik az állóképessége.",
+      "stats": {
+        "speed": 2,
+        "stamina": 3,
+        "stealth": 5,
+        "extraction": 4
+      },
+      "color": "lime"
+    },
+    {
+      "id": "teagan",
+      "name": "Teagan",
+      "role": "Gyógyító",
+      "description": "Kifinomult és udvarias teáskanna. Úgy gondolja, egy jó csésze tea minden problémát megold.",
+      "ability": "Nyugtató Főzet: Képes lassan gyógyítani a közelében lévő csapattársak életerejét (HP) a szintek között.",
+      "stats": {
+        "speed": 2,
+        "stamina": 3,
+        "stealth": 4,
+        "extraction": 3
+      },
+      "color": "stone"
+    },
+    {
+      "id": "tisha",
+      "name": "Tisha",
+      "role": "Támogató / Gyorsító",
+      "description": "A tisztaság megszállottja, egy kedves tollseprű. Mindig talál időt, hogy leporoljon valamit.",
+      "ability": "Söprés: Futás közben képes rövidebb ideig extra sebességre kapcsolni.",
+      "stats": {
+        "speed": 4,
+        "stamina": 4,
+        "stealth": 2,
+        "extraction": 3
+      },
+      "color": "emerald"
+    },
+    {
+      "id": "vee",
+      "name": "Vee",
+      "role": "Felderítő / Informátor",
+      "description": "Analitikus és objektív. A képernyőjén lévő arca gyakran változik a helyzetnek megfelelően. Ő látja át legjobban a pályát.",
+      "ability": "Közvetítés: Képes a távolból is meglátni a befejezetlen gépek körvonalait a falakon keresztül.",
+      "stats": {
+        "speed": 3,
+        "stamina": 2,
+        "stealth": 3,
+        "extraction": 4
+      },
+      "color": "purple"
     }
   ],
   "twisteds": [
     {
+      "id": "twisted-astro",
+      "name": "Twisted Astro",
+      "danger": "Magas",
+      "mechanic": "Ha észrevesz, hirtelen egy pillanatra sötétséget borít rád (lecsökkenti a saját látótávolságodat).",
+      "tip": "Maradj nyugodt a sötétségben. Memorizáld a térképet, hogy vakon is be tudj fordulni a legközelebbi biztonságos ajtón!",
+      "color": "twistedAstro",
+      "accent": "slate"
+    },
+    {
+      "id": "twisted-boxten",
+      "name": "Twisted Boxten",
+      "danger": "Közepes",
+      "mechanic": "Jellemzően a gépek körül őrjáratozik. Nem túl gyors, de a látótere meglepően széles a doboz-forma ellenére.",
+      "tip": "Csalogasd el a géptől, fuss be egy szobába, majd amíg próbál követni, a csapattársaid elkezdhetik a szerelést.",
+      "color": "twistedBoxten",
+      "accent": "blue"
+    },
+    {
+      "id": "twisted-brightney",
+      "name": "Twisted Brightney",
+      "danger": "Extrém",
+      "mechanic": "Megtévesztően úgy világít a sötétben, mintha egy biztonságos zóna vagy egy normál Brightney lenne.",
+      "tip": "Ha a Blackout szinten egy nagyon erős, pislákoló sárga fényt látsz feléd közeledni zörejekkel kísérve, az nem a barátod! Fuss az ellenkező irányba!",
+      "color": "twistedBrightney",
+      "accent": "yellow"
+    },
+    {
+      "id": "twisted-cosmo",
+      "name": "Twisted Cosmo",
+      "danger": "Magas",
+      "mechanic": "Lebegve közlekedik, így teljesen hangtalanok a léptei. Csak halk asztrális zúgás kíséri.",
+      "tip": "Ha elkezdesz \"űrbéli zúgást\" hallani, azonnal bújj asztal alá, mert nagyon nehéz vizuálisan észrevenni a sötétben.",
+      "color": "twistedCosmo",
+      "accent": "cyan"
+    },
+    {
       "id": "twisted-dandy",
       "name": "Twisted Dandy",
       "danger": "Extrém",
-      "mechanic": "Nem egy adott gépet véd, hanem véletlenszerűen bukkan fel. Ha meglát, esélyed sincs elfutni előle nyílt terepen.",
-      "tip": "Soha ne fuss egyenes vonalban. Használd a sarkokat, bújj el azonnal, és kapcsold ki a zseblámpád. Ne próbáld lefutni.",
+      "mechanic": "Nem egy adott gépet véd, hanem véletlenszerűen, a semmiből bukkan fel. Ha meglát, esélyed sincs elfutni előle nyílt terepen.",
+      "tip": "Soha ne fuss egyenes vonalban! Használd a sarkokat, bújj el azonnal, és kapcsold ki a zseblámpád. Ne próbáld lefutni.",
       "color": "twistedDandy",
       "accent": "rose"
     },
     {
-      "id": "twisted-shrimpo",
-      "name": "Twisted Shrimpo",
+      "id": "twisted-finn",
+      "name": "Twisted Finn",
       "danger": "Magas",
-      "mechanic": "Nagyon agresszív. Ha meghall egy elrontott gépet, azonnal odarohan. Látása viszont nem a legjobb.",
-      "tip": "Könnyen loopolható: ha egy nagy asztal vagy polc körül futsz, nehezebben veszi be a kanyarokat, így időt nyerhetsz a csapatnak.",
-      "color": "twistedShrimpo",
-      "accent": "red"
+      "mechanic": "Vízpocsolyákat hagy a padlón, amin elcsúszva a Toonod elveszíti az irányítást (egy rövid időre nem tudsz kanyarodni).",
+      "tip": "Ugord át a pocsolyákat! Ha üldöz, és belemész egy tócsába, garantáltan a falnak ütközöl és elkap.",
+      "color": "twistedFinn",
+      "accent": "sky"
+    },
+    {
+      "id": "twisted-flutter",
+      "name": "Twisted Flutter",
+      "danger": "Közepes",
+      "mechanic": "Csendes, repkedő mozgású. Bár sebzése nem a legnagyobb, nagyon nehéz elszakadni tőle, mert \"ráragad\" a játékosra.",
+      "tip": "Csalogasd be egy szobába, és csukd be az ajtót (vagy fuss ki a teremből). Viszonylag lassan reagál a tereptárgyakra.",
+      "color": "twistedFlutter",
+      "accent": "indigo"
+    },
+    {
+      "id": "twisted-glisten",
+      "name": "Twisted Glisten",
+      "danger": "Magas",
+      "mechanic": "A törött tükörkép folyamatosan csilingelő, üveges hangot ad ki. Ha közvetlenül rád néz, a képernyőd széle elkezd vakítóan fehéredni.",
+      "tip": "Ne nézz rá! Forgasd el a kamerát, és próbálj meg háttal futni neki a sarkoknál, különben teljesen megvakít a monitorod.",
+      "color": "twistedGlisten",
+      "accent": "fuchsia"
+    },
+    {
+      "id": "twisted-goob",
+      "name": "Twisted Goob",
+      "danger": "Magas",
+      "mechanic": "Kinyújtott, hosszú karjaival pásztázza a folyosókat. Lassabban mozog, de a hatótávolsága gigantikus.",
+      "tip": "Soha ne hidd, hogy biztonságban vagy, csak mert messze van! Képes a folyosó végéről is elkapni a hosszú karjával. Bújj fedezék mögé!",
+      "color": "twistedGoob",
+      "accent": "violet"
     },
     {
       "id": "twisted-pebble",
       "name": "Twisted Pebble",
-      "danger": "Közepes",
-      "mechanic": "Hihetetlenül gyorsan mozog a pályán, kutyaként szimatolva. Hamar észrevesz, ha futsz.",
-      "tip": "Lopakodj. Ha lopakodsz, szinte átsétálhatsz mellette anélkül, hogy észrevenne. Ne kelts zajt a közelében.",
+      "danger": "Magas",
+      "mechanic": "Hihetetlenül gyorsan mozog a pályán, kutyaként szimatolva. Hamar észrevesz, ha futsz vagy zajt csapsz.",
+      "tip": "Lopakodj (C gomb)! Ha lopakodsz, szinte átsétálhatsz mellette anélkül, hogy észrevenne. Ne kelts zajt a közelében.",
       "color": "twistedPebble",
       "accent": "amber"
     },
@@ -129,9 +618,81 @@
       "name": "Twisted Poppy",
       "danger": "Közepes",
       "mechanic": "Hangosan sír és nevet felváltva. Nagyon messzire ellát a folyosókon, és gyorsan a nyomodba ered.",
-      "tip": "Törd meg a látóterét. Keress ajtókat és sarkokat, mert ha nem lát közvetlenül, hamar feladja az üldözést.",
+      "tip": "Törd meg a látóterét (Line of Sight)! Keress ajtókat és sarkokat, mert ha nem lát közvetlenül, hamar feladja az üldözést.",
       "color": "twistedPoppy",
       "accent": "pink"
+    },
+    {
+      "id": "twisted-razzle-dazzle",
+      "name": "Twisted Razzle & Dazzle",
+      "danger": "Extrém",
+      "mechanic": "Kiszámíthatatlanul ugrálnak a \"követés\" és az \"őrjárat\" mód között. Néha látszólag elmennek melletted, majd hirtelen visszafordulnak.",
+      "tip": "Soha ne bízz abban, hogy feladták az üldözést! Várj legalább 10 másodpercet a rejtekhelyeden, miután eltűntek a látóteredből.",
+      "color": "twistedRazzleDazzle",
+      "accent": "zinc"
+    },
+    {
+      "id": "twisted-scraps",
+      "name": "Twisted Scraps",
+      "danger": "Magas",
+      "mechanic": "Szereti megrongálni a félig megszerelt gépeket, így hátráltatva a csapatot. Váratlanul képes gyorsulni.",
+      "tip": "Ha elhagyod a gépet miatta, biztos lehetsz benne, hogy visszaveti a haladást. Inkább vond magadra a figyelmét, és vidd messzire a gépektől!",
+      "color": "twistedScraps",
+      "accent": "orange"
+    },
+    {
+      "id": "twisted-shelly",
+      "name": "Twisted Shelly",
+      "danger": "Közepes",
+      "mechanic": "Nagyon csendes. A páncélja miatt nehéz meghallani a közeledését (a szívverésed csak későn jelez).",
+      "tip": "Folyamatosan forgasd a kamerát hátrafelé! Mivel hangtalanul közlekedik, gyakran csak akkor veszed észre, amikor már a nyakadban liheg.",
+      "color": "twistedShelly",
+      "accent": "teal"
+    },
+    {
+      "id": "twisted-shrimpo",
+      "name": "Twisted Shrimpo",
+      "danger": "Magas",
+      "mechanic": "Rendkívül agresszív. Ha meghall egy elrontott gépet (Skill Check), azonnal odarohan. Látása viszont nem a legjobb.",
+      "tip": "Könnyen 'loopolható', azaz ha egy nagy asztal vagy polc körül futkorászol, nehezen veszi be a kanyarokat, így időt nyerhetsz a csapatnak.",
+      "color": "twistedShrimpo",
+      "accent": "red"
+    },
+    {
+      "id": "twisted-sprout",
+      "name": "Twisted Sprout",
+      "danger": "Közepes",
+      "mechanic": "Tüskés indákat hagy maga után a padlón. Ha ezekbe belemész, jelentősen lelassulsz.",
+      "tip": "Figyeld a padlót! A sötét szinteken különösen veszélyes a hátrahagyott csapdája. Inkább kerülőúton menj a géphez.",
+      "color": "twistedSprout",
+      "accent": "lime"
+    },
+    {
+      "id": "twisted-teagan",
+      "name": "Twisted Teagan",
+      "danger": "Közepes",
+      "mechanic": "Forró gőzt fúj maga köré, ami kisebb területen akkor is sebez, ha nem ér hozzád közvetlenül.",
+      "tip": "Tartsd a távolságot a szűk folyosókon! Ne próbálj meg elfutni mellette egy keskeny folyosón, mert a gőzfelhőbe biztosan belesérülsz.",
+      "color": "twistedTeagan",
+      "accent": "stone"
+    },
+    {
+      "id": "twisted-tisha",
+      "name": "Twisted Tisha",
+      "danger": "Magas",
+      "mechanic": "Hihetetlenül gyors végsebességgel rendelkezik. Ha sokáig kerget egyenes vonalban, egyre gyorsabbá válik.",
+      "tip": "Kényszerítsd irányváltásra! A kanyarokban elveszíti a felhalmozott sebességét. Soha ne menekülj előle hosszú, egyenes folyosón.",
+      "color": "twistedTisha",
+      "accent": "emerald"
+    },
+    {
+      "id": "twisted-vee",
+      "name": "Twisted Vee",
+      "danger": "Extrém",
+      "mechanic": "Statikus zörejt bocsát ki. Ha a tévéképernyőjének a fénye rád vetül, azonnal riadóztatja a többi közeli Twisted Toont is.",
+      "tip": "Ő egy \"kamera-szörny\". Kerüld el a látóterét jelző pirosas fényt a padlón. Ha meglát, ne csak előle, hanem a többi érkező szörny elől is menekülj!",
+      "color": "twistedVee",
+      "accent": "purple"
     }
   ]
 }

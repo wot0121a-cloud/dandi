@@ -118,3 +118,66 @@ a {
   border-top: 1px solid hsl(var(--border-color));
   text-align: center;
 }
+
+/* Badge and Icon Colors */
+.bg-slate { background-color: #64748b; color: #fff; }
+.bg-blue { background-color: #3b82f6; color: #fff; }
+.bg-yellow { background-color: #eab308; color: #fff; }
+.bg-cyan { background-color: #06b6d4; color: #fff; }
+.bg-sky { background-color: #0ea5e9; color: #fff; }
+.bg-indigo { background-color: #6366f1; color: #fff; }
+.bg-fuchsia { background-color: #d946ef; color: #fff; }
+.bg-violet { background-color: #8b5cf6; color: #fff; }
+.bg-amber { background-color: #f59e0b; color: #fff; }
+.bg-pink { background-color: #ec4899; color: #fff; }
+.bg-zinc { background-color: #71717a; color: #fff; }
+.bg-orange { background-color: #f97316; color: #fff; }
+.bg-teal { background-color: #14b8a6; color: #fff; }
+.bg-red { background-color: #ef4444; color: #fff; }
+.bg-lime { background-color: #84cc16; color: #fff; }
+.bg-stone { background-color: #78716c; color: #fff; }
+.bg-emerald { background-color: #10b981; color: #fff; }
+.bg-purple { background-color: #a855f7; color: #fff; }
+.bg-rose { background-color: #f43f5e; color: #fff; }
+
+.text-slate { color: #64748b; }
+.text-blue { color: #3b82f6; }
+.text-yellow { color: #eab308; }
+.text-cyan { color: #06b6d4; }
+.text-sky { color: #0ea5e9; }
+.text-indigo { color: #6366f1; }
+.text-fuchsia { color: #d946ef; }
+.text-violet { color: #8b5cf6; }
+.text-amber { color: #f59e0b; }
+.text-pink { color: #ec4899; }
+.text-zinc { color: #71717a; }
+.text-orange { color: #f97316; }
+.text-teal { color: #14b8a6; }
+.text-red { color: #ef4444; }
+.text-lime { color: #84cc16; }
+.text-stone { color: #78716c; }
+.text-emerald { color: #10b981; }
+.text-purple { color: #a855f7; }
+.text-rose { color: #f43f5e; }
+
+:root {
+  --color-slate: #64748b;
+  --color-blue: #3b82f6;
+  --color-yellow: #eab308;
+  --color-cyan: #06b6d4;
+  --color-sky: #0ea5e9;
+  --color-indigo: #6366f1;
+  --color-fuchsia: #d946ef;
+  --color-violet: #8b5cf6;
+  --color-amber: #f59e0b;
+  --color-pink: #ec4899;
+  --color-zinc: #71717a;
+  --color-orange: #f97316;
+  --color-teal: #14b8a6;
+  --color-red: #ef4444;
+  --color-lime: #84cc16;
+  --color-stone: #78716c;
+  --color-emerald: #10b981;
+  --color-purple: #a855f7;
+  --color-rose: #f43f5e;
+}
