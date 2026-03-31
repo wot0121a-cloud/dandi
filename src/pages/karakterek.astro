@@ -57,19 +57,25 @@ const description = "Minden, amit a Dandy's World karaktereiről tudni érdemes.
 
 		.char-grid {
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-			gap: 2.5rem;
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: 1.5rem;
 		}
 
 		.char-card {
 			background: hsl(var(--bg-secondary));
 			border-radius: var(--radius-lg);
-			padding: 2.5rem;
+			padding: 1.5rem;
 			border: 1px solid hsl(var(--border-color));
 			display: flex;
 			flex-direction: column;
 			gap: 1.5rem;
 			transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+
+		@media (min-width: 768px) {
+			.char-card {
+				padding: 2.5rem;
+			}
 		}
 
 		.char-card:hover {
