@@ -25,7 +25,8 @@ const description = "Ismerd meg a Twisted változataikat! Hogyan kerüld el őke
 					</div>
 					
 					<div class="twisted-img-wrapper" style={`border-bottom: 2px solid var(--color-${twisted.accent});`}>
-						<img src={`/images/characters/${twisted.id.replace('twisted-', '')}.webp`} alt={`${twisted.name} Twisted változat`} class="twisted-img" loading="lazy" />
+						<img src={`/images/characters/${twisted.id}.png`} alt={`${twisted.name} Twisted változat`} class="twisted-img" loading="lazy" />
+						<span class="attribution">Forrás: Dandy's World Fandom Wiki</span>
 					</div>
 
 					<div class="mechanic-box">
@@ -160,6 +161,17 @@ const description = "Ismerd meg a Twisted változataikat! Hogyan kerüld el őke
 			object-fit: contain;
 			filter: drop-shadow(0 20px 30px rgba(0,0,0,0.8)) sepia(0.3) hue-rotate(-10deg) saturate(0.8) brightness(0.8);
 			transition: all 0.3s ease;
+		}
+
+		.attribution {
+			position: absolute;
+			bottom: 10px;
+			right: 15px;
+			font-size: 0.6rem;
+			color: #fff;
+			opacity: 0.3;
+			font-style: italic;
+			z-index: 2;
 		}
 		
 		.twisted-card:hover .twisted-img {

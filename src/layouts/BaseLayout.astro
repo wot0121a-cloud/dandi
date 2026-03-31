@@ -23,11 +23,43 @@ const currentPath = Astro.url.pathname;
 <html lang="hu">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+
+		<!-- Primary Meta Tags -->
 		<title>{fullTitle}</title>
+		<meta name="title" content={fullTitle} />
+		<meta name="description" content={description} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url} />
+		<meta property="og:title" content={fullTitle} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL('/og-image.jpg', Astro.url)} />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={Astro.url} />
+		<meta property="twitter:title" content={fullTitle} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={new URL('/og-image.jpg', Astro.url)} />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href={Astro.url} />
+
+		<!-- Google Search Console Placeholder -->
+		<meta name="google-site-verification" content="GSC_ID_PLACEHOLDER" />
+
+		<!-- Global site tag (gtag.js) - Google Analytics Placeholder -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=GA_ID_PLACEHOLDER"></script>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'GA_ID_PLACEHOLDER');
+		</script>
 	</head>
 	<body>
 		<header class="site-header">

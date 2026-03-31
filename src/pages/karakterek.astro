@@ -18,12 +18,13 @@ const description = "Minden, amit a Dandy's World karaktereiről tudni érdemes.
 				<div class={`role-badge bg-${char.color}`}>{char.role}</div>
 
 				<div class="char-img-wrapper">
-					<img src={`/images/characters/${char.id}.webp`} alt={`${char.name} hivatalos render`} class="char-img" loading="lazy" />
+					<img src={`/images/characters/${char.id}.png`} alt={`${char.name} hivatalos render`} class="char-img" loading="lazy" />
 				</div>
 				
 				<div class="char-info">
 					<h2 class="char-name">{char.name}</h2>
 					<p class="char-desc">{char.description}</p>
+					<span class="attribution">Forrás: Dandy's World Fandom Wiki</span>
 				</div>
 
 				<div class="stats-container">
@@ -113,6 +114,15 @@ const description = "Minden, amit a Dandy's World karaktereiről tudni érdemes.
 		.char-desc {
 			color: hsl(var(--text-secondary));
 			font-size: 1rem;
+			margin-bottom: 0.5rem;
+		}
+
+		.attribution {
+			display: block;
+			font-size: 0.7rem;
+			color: hsl(var(--text-secondary));
+			opacity: 0.5;
+			font-style: italic;
 		}
 
 		.stats-container {

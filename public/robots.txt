@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dandis-world-fansite-placeholder.pages.dev/sitemap-index.xml
